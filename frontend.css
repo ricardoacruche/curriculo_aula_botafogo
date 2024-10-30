@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10%;
+    background: transparent;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+    transition: all .55s ease;
+}
+.navlist a:hover{
+    border-bottom: 2px solid white;
+}
+.heroi{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #4d4e4d 0%, #757575 28.53%, #b6b6b6 75.52%);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+}
+section{
+    padding: 18%;
+}
+.logo{
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+.heroi-texto h5{
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+.heroi-texto h1{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-style: normal;
+    font-size: 120px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;    
+}
+.heroi-texto .heading-1{   
+    font-family: "Rubik Wet Paint", system-ui;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+}
+.heroi-texto h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+.heroi-texto p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+.heroi-img img{
+    width: 680px;
+    height: auto;
+}
+.imagem {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+  
+.heroi-img:hover .imagem {
+    opacity: 0.3;
+}
+.heroi-img:hover .middle {
+    opacity: 1;
+} 
+.middle a {
+    display: inline-block;
+    color: white;
+    background-color: #757575;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .50s ease;
+}
+.middle a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+.heroi-texto a{
+    display: inline-block;
+    color: white;
+    background: #757575;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+.heroi-texto a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+.icons{
+    position: absolute;
+    top: 68%;
+    padding: 0 12%;
+    transform: translateY(-50%);
+}
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 38px;
+    color: white;
+    transition: all .55s ease;
+}
+.icons i:hover{
+    color: #757575;
+    transform: translateY(-5px);
+}
+.scroll-down{
+    position: absolute;
+    bottom: 6%;
+    right: 9%;
+}
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #757575;
+    border-radius: 30px;
+    transition: all .55s ease;
+}
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+form {
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .input-box input,
+form textarea{
+    width: 100%;
+    padding:  1rem;
+    font-size: 1rem;
+    color: #757575;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    margin: 0.4rem 0;
+}
+form textarea{
+    resize: none;
+}
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-365px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.heading-1{
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function:ease-in;
+    animation-delay: 0s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+    animation-fill-mode: both;
+
+    transform: translateX(-150px);
+}
+.rodape{
+    position:absolute;
+    top: 98%;
+    align-items: right;
+    padding: 0 33%;
+    font-size: 15px;
+    font-weight: 200;
+    color: white;
+}
